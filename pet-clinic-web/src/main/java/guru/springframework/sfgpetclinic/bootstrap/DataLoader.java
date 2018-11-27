@@ -6,6 +6,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  * Created by jt on 7/25/18.
@@ -71,18 +73,23 @@ public class DataLoader implements CommandLineRunner {
 
         ownerService.save(owner1);
 
-        Owner owner2 = new Owner();
-        owner2.setFirstName("Fiona");
-        owner2.setLastName("Glenanne");
-        owner2.setAddress("22 Street");
-        owner2.setCity("NY");
-        owner2.setTelephone("483222098");
+        Owner owner2 = Owner.builder()
+                .firstName("Fiona")
+                .lastName("Glenanne")
+                .address("22 Street")
+                .city("NY")
+                .telephone("483222098")
+                .pets(new HashSet<>()) // Even though pets collection should be initialized (look into class) I had to set it when I use lombok
+                .build();
 
-        Pet fionaPet = new Pet();
-        fionaPet.setPetType(savedCatPetType);
-        fionaPet.setOwner(owner2);
-        fionaPet.setBirthDate(LocalDate.now());
-        fionaPet.setName("Rademenes");
+        Pet fionaPet = Pet.builder()
+                .petType(savedCatPetType)
+                .owner(owner2)
+                .birthDate(LocalDate.now())
+                .name("Rademenes")
+                .visits(new HashSet<>()) // Same as above
+                .build();
+
         owner2.getPets().add(fionaPet);
 
         ownerService.save(owner2);
