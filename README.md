@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/arianero/sfg-pet-clinic/tree/spring-framework-guru.svg?style=svg)](https://circleci.com/gh/arianero/sfg-pet-clinic/tree/spring-framework-guru)
+
 # Spring Framework Guru Pet Clinic
 
 This repo is for my online course called [Spring Framework 5: Beginner to Guru](https://www.udemy.com/spring-framework-5-beginner-to-guru/?couponCode=GITHUB_SFGPETCLINIC).
