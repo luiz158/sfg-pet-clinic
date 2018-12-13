@@ -18,6 +18,8 @@ import javax.persistence.Table;
 @Table(name = "types")
 public class PetType extends BaseEntity {
 
+    public PetType() {}
+
     @Builder
     public PetType(Long id, String name) {
         super(id);
@@ -31,5 +33,29 @@ public class PetType extends BaseEntity {
     @Override
     public String toString() {
         return name;
+    }
+
+    @Override
+    public Long getId() {
+        return super.getId();
+    }
+
+    @Override
+    public void setId(Long id) {
+        super.setId(id);
+    }
+
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
     }
 }
