@@ -43,6 +43,7 @@ public class Owner extends Person {
     @Column(name = "telephone")
     private String telephone;
 
+    // one owner to many pets
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
 
@@ -78,16 +79,6 @@ public class Owner extends Person {
     }
 
     @Override
-    public Long getId() {
-        return super.getId();
-    }
-
-    @Override
-    public void setId(Long id) {
-        super.setId(id);
-    }
-
-    @Override
     public String getFirstName() {
         return super.getFirstName();
     }
@@ -107,58 +98,34 @@ public class Owner extends Person {
         super.setLastName(lastName);
     }
 
-    /**
-     * @return the address
-     */
     public String getAddress() {
         return address;
     }
 
-    /**
-     * @param address the address to set
-     */
     public void setAddress(String address) {
         this.address = address;
     }
 
-    /**
-     * @return the city
-     */
     public String getCity() {
         return city;
     }
 
-    /**
-     * @param city the city to set
-     */
     public void setCity(String city) {
         this.city = city;
     }
 
-    /**
-     * @return the pets
-     */
     public Set<Pet> getPets() {
         return pets;
     }
 
-    /**
-     * @param pets the pets to set
-     */
     public void setPets(Set<Pet> pets) {
         this.pets = pets;
     }
 
-    /**
-     * @return the telephone
-     */
     public String getTelephone() {
         return telephone;
     }
 
-    /**
-     * @param telephone the telephone to set
-     */
     public void setTelephone(String telephone) {
         this.telephone = telephone;
     }

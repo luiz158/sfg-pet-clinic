@@ -24,16 +24,6 @@ public class Vet extends Person {
     private Set<Speciality> specialities = new HashSet<>();
 
     @Override
-    public Long getId() {
-        return super.getId();
-    }
-
-    @Override
-    public void setId(Long id) {
-        super.setId(id);
-    }
-
-    @Override
     public String getFirstName() {
         return super.getFirstName();
     }
@@ -53,16 +43,10 @@ public class Vet extends Person {
         super.setLastName(lastName);
     }
 
-    /**
-     * @return the specialities
-     */
     public Set<Speciality> getSpecialities() {
         return specialities;
     }
 
-    /**
-     * @param specialities the specialities to set
-     */
     public void setSpecialities(Set<Speciality> specialities) {
         this.specialities = specialities;
     }

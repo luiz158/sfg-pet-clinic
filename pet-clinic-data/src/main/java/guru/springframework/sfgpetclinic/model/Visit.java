@@ -31,47 +31,22 @@ public class Visit extends BaseEntity {
         return date;
     }
 
-    @Override
-    public Long getId() {
-        return super.getId();
-    }
-
-    @Override
-    public void setId(Long id) {
-        super.setId(id);
-    }
-
-    /**
-     * @return the pet
-     */
     public Pet getPet() {
         return pet;
     }
 
-    /**
-     * @param pet the pet to set
-     */
     public void setPet(Pet pet) {
         this.pet = pet;
     }
 
-    /**
-     * @return the description
-     */
     public String getDescription() {
         return description;
     }
 
-    /**
-     * @param description the description to set
-     */
     public void setDescription(String description) {
         this.description = description;
     }
 
-    /**
-     * @param date the date to set
-     */
     public void setDate(LocalDate date) {
         this.date = date;
     }

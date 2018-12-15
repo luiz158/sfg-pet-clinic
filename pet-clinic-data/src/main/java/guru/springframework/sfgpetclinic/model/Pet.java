@@ -49,85 +49,46 @@ public class Pet extends BaseEntity {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate birthDate;
 
+    // one pet to many visits
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "pet")
     private Set<Visit> visits = new HashSet<>();
 
-    @Override
-    public Long getId() {
-        return super.getId();
-    }
-
-    @Override
-    public void setId(Long id) {
-        super.setId(id);
-    }
-
-    /**
-     * @return the birthDate
-     */
     public LocalDate getBirthDate() {
         return birthDate;
     }
 
-    /**
-     * @param birthDate the birthDate to set
-     */
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
-    /**
-     * @return the name
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     * @param name the name to set
-     */
     public void setName(String name) {
         this.name = name;
     }
 
-    /**
-     * @return the owner
-     */
     public Owner getOwner() {
         return owner;
     }
 
-    /**
-     * @param owner the owner to set
-     */
     public void setOwner(Owner owner) {
         this.owner = owner;
     }
 
-    /**
-     * @return the petType
-     */
     public PetType getPetType() {
         return petType;
     }
 
-    /**
-     * @param petType the petType to set
-     */
     public void setPetType(PetType petType) {
         this.petType = petType;
     }
 
-    /**
-     * @return the visits
-     */
     public Set<Visit> getVisits() {
         return visits;
     }
 
-    /**
-     * @param visits the visits to set
-     */
     public void setVisits(Set<Visit> visits) {
         this.visits = visits;
     }
