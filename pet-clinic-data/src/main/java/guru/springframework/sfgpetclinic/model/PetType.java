@@ -18,8 +18,6 @@ import javax.persistence.Table;
 @Table(name = "types")
 public class PetType extends BaseEntity {
 
-    public PetType() {}
-
     @Builder
     public PetType(Long id, String name) {
         super(id);

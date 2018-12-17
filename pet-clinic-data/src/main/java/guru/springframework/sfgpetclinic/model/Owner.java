@@ -19,8 +19,6 @@ import java.util.Set;
 @Table(name = "owners")
 public class Owner extends Person {
 
-    public Owner() {}
-    
     @Builder
     public Owner(Long id, String firstName, String lastName, String address, String city,
                  String telephone, Set<Pet> pets) {
@@ -77,57 +75,4 @@ public class Owner extends Person {
         }
         return null;
     }
-
-    @Override
-    public String getFirstName() {
-        return super.getFirstName();
-    }
-
-    @Override
-    public void setFirstName(String firstName) {
-        super.setFirstName(firstName);
-    }
-
-    @Override
-    public String getLastName() {
-        return super.getLastName();
-    }
-
-    @Override
-    public void setLastName(String lastName) {
-        super.setLastName(lastName);
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public Set<Pet> getPets() {
-        return pets;
-    }
-
-    public void setPets(Set<Pet> pets) {
-        this.pets = pets;
-    }
-
-    public String getTelephone() {
-        return telephone;
-    }
-
-    public void setTelephone(String telephone) {
-        this.telephone = telephone;
-    }
-
 }
