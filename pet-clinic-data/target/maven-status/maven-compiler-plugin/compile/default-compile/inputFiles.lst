@@ -1,5 +1,8 @@
 /Users/traffit/MyApps/sfg-pet-clinic/pet-clinic-data/src/main/java/guru/springframework/sfgpetclinic/model/Vet.java
+/Users/traffit/MyApps/sfg-pet-clinic/pet-clinic-data/src/main/java/guru/springframework/sfgpetclinic/services/VetService.java
 /Users/traffit/MyApps/sfg-pet-clinic/pet-clinic-data/src/main/java/guru/springframework/sfgpetclinic/model/Pet.java
+/Users/traffit/MyApps/sfg-pet-clinic/pet-clinic-data/src/main/java/guru/springframework/sfgpetclinic/services/PetService.java
+/Users/traffit/MyApps/sfg-pet-clinic/pet-clinic-data/src/main/java/guru/springframework/sfgpetclinic/services/OwnerService.java
 /Users/traffit/MyApps/sfg-pet-clinic/pet-clinic-data/src/main/java/guru/springframework/sfgpetclinic/model/Person.java
 /Users/traffit/MyApps/sfg-pet-clinic/pet-clinic-data/src/main/java/guru/springframework/sfgpetclinic/model/PetType.java
 /Users/traffit/MyApps/sfg-pet-clinic/pet-clinic-data/src/main/java/guru/springframework/sfgpetclinic/model/Owner.java
