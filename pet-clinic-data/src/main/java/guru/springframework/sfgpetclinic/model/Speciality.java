@@ -18,7 +18,9 @@ import javax.persistence.Table;
 @Table(name = "specialties")
 public class Speciality extends BaseEntity {
 
-    @Column(name = "description")
+	private static final long serialVersionUID = 1L;
+	
+	@Column(name = "description")
     private String description;
 
 }
