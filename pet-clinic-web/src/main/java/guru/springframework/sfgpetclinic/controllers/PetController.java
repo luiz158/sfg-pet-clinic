@@ -23,9 +23,10 @@ public class PetController {
     private final OwnerService ownerService;
     private final PetTypeService petTypeService;
 
-    public PetController(PetService petService, OwnerService ownerService) {
+    public PetController(PetService petService, OwnerService ownerService, PetTypeService petTypeService) {
         this.petService = petService;
         this.ownerService = ownerService;
+        this.petTypeService = petTypeService;
     }
 
     @ModelAttribute("types")
