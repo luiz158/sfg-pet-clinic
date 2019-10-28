@@ -9,3 +9,6 @@ Contained in this repo is an opinionated version of the classic reference applic
 # License
 
 The Spring PetClinic sample application is released under version 2.0 of the [Apache License](http://www.apache.org/licenses/LICENSE-2.0).
+
+This is Daniel's version of Pet Clinic, beginning at commit #17 
+d8e47f665182e5a3d18e9927d78cc61bf57ab15f
