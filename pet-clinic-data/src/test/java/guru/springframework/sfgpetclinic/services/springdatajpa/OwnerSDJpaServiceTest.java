@@ -24,6 +24,7 @@ import static org.mockito.Mockito.*;
 class OwnerSDJpaServiceTest {
 
     public static final String LAST_NAME = "Smith";
+
     @Mock
     OwnerRepository ownerRepository;
 
@@ -33,23 +34,24 @@ class OwnerSDJpaServiceTest {
     @Mock
     PetTypeRepository petTypeRepository;
 
-    @InjectMocks
+    @InjectMocks // If not injected while using the service it throws NullPointerException
     OwnerSDJpaService service;
 
     Owner returnOwner;
 
     @BeforeEach
-    void setUp() {
+    void setUp(){
         returnOwner = Owner.builder().id(1l).lastName(LAST_NAME).build();
     }
 
     @Test
     void findByLastName() {
-        when(ownerRepository.findByLastName(any())).thenReturn(returnOwner);
+
+        when(service.findByLastName(any())).thenReturn(returnOwner);
 
         Owner smith = service.findByLastName(LAST_NAME);
 
-        assertEquals(LAST_NAME, smith.getLastName());
+        assertEquals(LAST_NAME,smith.getLastName());
 
         verify(ownerRepository).findByLastName(any());
     }
@@ -65,7 +67,7 @@ class OwnerSDJpaServiceTest {
         Set<Owner> owners = service.findAll();
 
         assertNotNull(owners);
-        assertEquals(2, owners.size());
+        assertEquals(2,owners.size());
     }
 
     @Test
@@ -78,14 +80,13 @@ class OwnerSDJpaServiceTest {
     }
 
     @Test
-    void findByIdNotFound() {
+    void findByIdNotFound(){
         when(ownerRepository.findById(anyLong())).thenReturn(Optional.empty());
 
         Owner owner = service.findById(1L);
 
         assertNull(owner);
     }
-
 
     @Test
     void save() {
